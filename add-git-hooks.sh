@@ -45,7 +45,7 @@ copy_files()
     local git_dirs=$(find ${FOLDER_PATH} -maxdepth ${MAX_DEPTH} -type d -regex ".*/.git" 2>/dev/null);
     for git_dir in ${git_dirs[*]}
     do
-        local dest_hook_path="${git_dir}/hooks";
+        local dest_hook_path="${git_dir}/hooks/${HOOK}";
         cp -u "${SRC_HOOKS_DIR}/${HOOK}" ${dest_hook_path};
         chmod 775 "${dest_hook_path}";
     done
