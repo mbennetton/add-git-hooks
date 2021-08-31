@@ -46,7 +46,7 @@ copy_files()
     for git_dir in ${git_dirs[*]}
     do
         local dest_hook_path="${git_dir}/hooks";
-        cp "${SRC_HOOKS_DIR}/${HOOK}" ${dest_hook_path};
+        cp -u "${SRC_HOOKS_DIR}/${HOOK}" ${dest_hook_path};
         chmod 775 "${dest_hook_path}";
     done
 }
