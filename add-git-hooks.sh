@@ -7,7 +7,6 @@ function usage() {
     echo "    -h|--hook                     Hook file to add";
     echo "    -p|--path                     Path to search for .git dir";
     echo "    --max-depth                   How deep to search for .git dir";
-    echo "    --single-pod                  Only run on one pod";
     echo "    --help                        Usage";
     exit;
 }
